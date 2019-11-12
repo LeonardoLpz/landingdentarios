@@ -11,33 +11,84 @@
     <meta http-equiv="expires" content="0"/>
     <meta name="copyright" content="dentarios.com.mx" />
     <meta name="keywords" content=""/>
-    <script src="js/botones.js"></script>
+    <script src="js/accionesBtn.js"></script>
     <script src="js/jquery-3.2.1.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <title>Dentarios MX</title>
 
+
+<!-- Event snippet for whatsapp conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-722267377/hGIgCKOpiqwBEPHZs9gC', 'event_callback': callback }); return false; } </script>
+    <!-- Global site tag (gtag.js) - Google Ads: 722267377 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-722267377"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-722267377'); </script>
+
+    <script> gtag('config', 'AW-722267377/8xrsCKzw_6sBEPHZs9gC', { 'phone_conversion_number': '5540947364' }); </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148455249-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148455249-1');
+</script>
+    <!-- Event snippet for Registro para formulario conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-722267377/05uPCIb6_6sBEPHZs9gC', 'event_callback': callback }); return false; } </script>
 </head>
 <body>
     <header>
         <figure>
-            <img src="" alt="">
+            <img src="img/DENTARIOS-taller_0009_DENTARIOS-600x600-logo.png" alt="DENTARIOS-taller_0009_DENTARIOS-600x600-logo">
             
 
         </figure>
         <h1>PLAN DE MARKETING DIGITAL PARA DENTISTAS</h1>
-        <p>En este taller conocerás las plataformas más importantes en la actualidad para crear publicidad estratégica <br>en el sector dental y como aumentar tu número de pacientes. </p>
-        <input type="button" value="Registrate por tan solo $699">
-        <p>O contáctanos para mayor información <span>aquí</span></p>
-        <p>CUPO LIMITADO</p>
+        <p>En este taller conocerás las plataformas más importantes en la actualidad para crear publicidad estratégica en el sector dental y como aumentar tu número de pacientes. </p>
+        <input type="button" value="Regístrate por tan solo $699" onclick="mostrarFormulario()">
+        <p id="mayorInfo">O contáctanos para mayor información <span onclick="llamada()">aquí</span></p>
+        <p id="cupoLimitado">CUPO LIMITADO</p>
         
-        <section>
-            <video src=""></video>
-            <div>
-                <input type="button" value="">
-                
-            </div>
-
-        </section>
+       
     </header>
+    <section>
+        <video src="Video_Taller_Dentarios_2019_V2_baja.m4v" controls preload="none" poster="img/imagenVIdeo.png" id="video"></video>
+        <figure>
+            <img src="img/DENTARIOS-taller_0002_calendario.png" alt="DENTARIOS-taller_0002_calendario" id="icoCalendario">
+            <figcaption>
+                Sábado 19 de Octubre 2019 <br>
+                de 16:00 a 19:30 hrs
+           
+            </figcaption>
+            <img src="img/DENTARIOS-taller_0003_icono-ubicacion.png" alt="DENTARIOS-taller_0003_icono-ubicacion" id="icoUbicacion">
+            <figcaption>
+                Av. Cuauhtémoc 841, <br>
+            Narvarte Poniente,
+            </figcaption>
+            
+            
+            <p id="precio">$699</p>
+            
+                <p id="adquirir">Al adquirir tu entrada al taller obtendrás <br> los siguientes beneficios:</p>   
+                <p id="gratis1">*GRATIS tu primer campaña publicitaria en Facebook.</p>
+                <p id="gratis2">*GRATIS tu sitio web básico avalado por Google o bien un landing page para una promoción que quieras difundir.</p>
+                <p id="asesoria">*Asesoría para implementar publicidad estratégica en tu negocio.</p>
+            
+
+
+        </figure>
+        <input type="button" value="Registrarme" id="registrarme" onclick="mostrarFormulario()">
+        <input type="button" value="WhatsApp" id="whatsapp" onclick="whatsapp()">
+
+    </section>
+    <form action="" id="formulario">
+   
+        <p>REGISTRO</p>
+        <p>Déjanos tus datos, y nosotros te contactamos para darle seguimiento a tu registro</p>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo">
+        <input type="email" name="email" id="email" placeholder="E-mail">
+        <input type="tel" name="tel" id="tel" placeholder="Número Telefónico">
+        <input type="button" value="Registrarme" onclick="datos2()">
+        <input type="button" value="Pagar" onclick="pago()">
+        <p id="cerrar" onclick="cerrar()">X</p>
+    </form>
+    <footer></footer>
 </body>
 </html>
